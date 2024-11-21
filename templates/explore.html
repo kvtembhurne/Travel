@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4">Explore Destinations</h1>
+<div class="list-group">
+    {% for destination in destinations %}
+    <div class="list-group-item">
+        <h5 class="mb-1">{{ destination.name }}</h5>
+        <p class="mb-1">{{ destination.details }}</p>
+        <small><strong>Recommended Routes:</strong> {{ destination.routes }}</small>
+    </div>
+    {% endfor %}
+</div>
+<a href="/" class="btn btn-secondary mt-4">Back to Home</a>
+{% endblock %}
